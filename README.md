@@ -44,7 +44,8 @@ Install on your Android device (enable Install from Unknown Sources if required)
 Launch and play!
 
 📁 Project Structure
-/
+
+
 ├── Audio/               # Sound effects and music
 
 ├── Backgrounds/         # Static background assets
