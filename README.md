@@ -46,11 +46,17 @@ Launch and play!
 📁 Project Structure
 /
 ├── Audio/               # Sound effects and music
+
 ├── Backgrounds/         # Static background assets
+
 ├── PNG/                 # Sprites for meteors, player, UI
+
 ├── scenes/              # Godot scenes (main level, player, meteor, UI...)
+
 ├── global/              # Global scripts and managers
+
 ├── project.godot        # Main Godot project file
+
 └── export_presets.cfg   # Export settings for PC and Android
 
 🛠️ Built With
