@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cplb1fot0mpqu"]
+
+[ext_resource type="Texture2D" uid="uid://cx1v0oxjj0jjk" path="res://PNG/Meteors/1.png" id="1_pkm0x"]
+[ext_resource type="Script" path="res://scenes/meteor.gd" id="1_yuhqd"]
+[ext_resource type="AudioStream" uid="uid://dovl350yf3t78" path="res://Audio/asteroid-hitting-something-152511.mp3" id="3_mja7v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ver0"]
+radius = 42.0
+
+[node name="Meteor" type="Area2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_yuhqd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pkm0x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("CircleShape2D_7ver0")
+
+[node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_mja7v")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

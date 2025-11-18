@@ -1,0 +1,178 @@
+[gd_scene load_steps=12 format=3 uid="uid://c7qxc2sfcteea"]
+
+[ext_resource type="Script" path="res://scenes/level.gd" id="1_whfsu"]
+[ext_resource type="Texture2D" uid="uid://b7fjh47kvf633" path="res://Backgrounds/BGG.webp" id="2_vym5n"]
+[ext_resource type="PackedScene" uid="uid://bndyd77or8hi3" path="res://scenes/player.tscn" id="2_xmhff"]
+[ext_resource type="Texture2D" uid="uid://c6w234npdweok" path="res://PNG/Effects/star1.png" id="3_cd6yl"]
+[ext_resource type="Texture2D" uid="uid://wxc6r8miy03a" path="res://PNG/Effects/star2.png" id="4_atjs2"]
+[ext_resource type="Texture2D" uid="uid://hnn71tqwr784" path="res://PNG/Effects/star3.png" id="5_5w6fr"]
+[ext_resource type="PackedScene" uid="uid://bqg83wpditdg3" path="res://scenes/ui.tscn" id="7_vbhr4"]
+[ext_resource type="AudioStream" uid="uid://dtnthqj2bcw6p" path="res://Audio/The_Weeknd_-_Baptized_In_Fear_Instrumental.mp3" id="8_l7dir"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8mx2e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cd6yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_atjs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5w6fr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrk6e"]
+size = Vector2(120, 649)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8ng6"]
+size = Vector2(1395, 113)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_whfsu")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(588, 294.25)
+scale = Vector2(1.65926, 1.78007)
+texture = ExtResource("2_vym5n")
+
+[node name="Stars" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.213634
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="AnimatedSprite2D16" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_8mx2e")
+autoplay = "default"
+frame_progress = 0.0477734
+
+[node name="Player" parent="." instance=ExtResource("2_xmhff")]
+position = Vector2(592, 399)
+
+[node name="Borders" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(1213, 323.5)
+shape = SubResource("RectangleShape2D_hrk6e")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
+position = Vector2(-60, 324)
+shape = SubResource("RectangleShape2D_hrk6e")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
+position = Vector2(577.5, -57.5)
+shape = SubResource("RectangleShape2D_x8ng6")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
+position = Vector2(576, 704)
+shape = SubResource("RectangleShape2D_x8ng6")
+
+[node name="MeteorTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Meteors" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Lasers" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="UI" parent="." instance=ExtResource("7_vbhr4")]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_l7dir")
+volume_db = -15.928
+autoplay = true
+
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
